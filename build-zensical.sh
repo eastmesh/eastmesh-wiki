@@ -1,1 +1,1 @@
-docker run --rm -it -v ${PWD}:/wiki zensical/zensical build
+docker run --rm -it -v ${PWD}:/docs zensical/zensical build
