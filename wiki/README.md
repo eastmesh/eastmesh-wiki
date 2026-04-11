@@ -32,7 +32,7 @@ Folder names map to wiki sections:
 - `hardware/`, `power/`, `radio/`, `enclosures/`, `build-guides/` — practical deployment guidance
 - `community/` — safety, conduct, and community-facing information
 - `reference/` — glossary/terminology-style content
-- Root pages (`home.md`, `getting-started.md`, `faq.md`, etc.) — top-level navigation and onboarding
+- Root pages (`home.md`, `index.md`, `faq.md`, etc.) — top-level navigation and onboarding
 
 ---
 
