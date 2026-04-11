@@ -13,7 +13,7 @@ This wiki is a mess and welcomes community input
 
 ## General info
 
-- **[Getting Started](./getting-started)**
+- **[Getting Started](./index)**
 - **[Recommended Hardware](./hardware/recommended)**
 - **[Common Questions](./faq)**
 - **[Terminology Reference](./reference/terminology)**
