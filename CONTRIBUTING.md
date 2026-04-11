@@ -55,7 +55,7 @@ Before making significant changes to a page:
 ### Technical accuracy
 
 - Include units and ranges (e.g., "−123 dBm", "SF7–SF12", "3.7 V nominal") rather than vague descriptions
-- Cross-reference related pages using relative links (e.g., `[Power & Solar](./power/overview)`)
+- Cross-reference related pages using relative links (e.g., `[Power & Solar](./wiki/power/overview)`)
 - If something is uncertain or known to vary by hardware/firmware version, say so explicitly
 
 ---
@@ -80,7 +80,7 @@ Update the `date` field when making significant content changes.
 
 ## Updating the changelog
 
-After making significant changes to one or more pages, add an entry to [changelog.md](./changelog) under the current date:
+After making significant changes to one or more pages, add an entry to [CHANGELOG.md](./CHANGELOG.md) under the current date:
 
 ```
 ## YYYY-MM-DD
@@ -91,13 +91,13 @@ After making significant changes to one or more pages, add an entry to [changelo
 
 ## Link conventions
 
-- Use relative links for internal wiki pages: `[Page Title](./path/to/page)`
-- From subdirectories, use `../` to navigate up: `[FAQ](../faq)`
+- Use relative links for internal wiki pages: `[Page Title](./wiki/path/to/page)`
+- From subdirectories within `wiki/`, use `../` to navigate up: `[FAQ](../faq)`
 - Check that linked pages exist before adding a new link
 
 ---
 
 ## Related pages
 
-- [Changelog](./changelog)
-- [Home](./home)
+- [Changelog](./CHANGELOG.md)
+- [Wiki Home](./wiki/index.md)

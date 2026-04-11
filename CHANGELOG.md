@@ -15,6 +15,17 @@ Track major changes to the wiki content and structure.
 
 ## 2026-04-11
 
+**Landing page/file layout and dark-mode investigation**
+
+- Renamed wiki entry pages so `index.md` is now the welcome/home page and onboarding content moved to `getting-started.md`.
+- Moved repository meta docs out of `wiki/` to root: `README.md`, `CONTRIBUTING.md`, and `CHANGELOG.md`.
+- Updated internal links affected by the page/file moves (including home and hardware references).
+- Investigated dark mode configuration: `zensical.toml` already defines both `theme` and `themeDark` palettes; no explicit dark-mode toggle setting exists in this repo config, suggesting mode switching is controlled by Zensical runtime/theme behavior rather than markdown content files.
+
+---
+
+## 2026-04-11
+
 **Zensical migration cleanup across the repo**
 
 - Removed WikiJS-only frontmatter keys (`editor`, `dateCreated`) from all Markdown pages to align metadata with the Zensical format used by this repository.
