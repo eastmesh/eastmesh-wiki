@@ -1,6 +1,6 @@
 [project]
 site_name = "EastMesh Wiki"
-site_url = "https://work.eastmesh.au"
+site_url = "https://wiki.eastmesh.au"
 site_description = "EastMesh operational and technical wiki"
 docs_dir = "wiki"
 site_dir = "site"
