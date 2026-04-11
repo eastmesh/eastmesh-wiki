@@ -86,7 +86,7 @@ Use this list before purchasing:
 
 ## Related pages
 
-- [Getting Started](../index)
+- [Getting Started](../getting-started)
 - [Build Guides](../build-guides/overview)
 - [Power & Solar](../power/overview)
 - [Antenna & RF Basics](../radio/overview)

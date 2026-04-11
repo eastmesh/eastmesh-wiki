@@ -32,7 +32,8 @@ Folder names map to wiki sections:
 - `hardware/`, `power/`, `radio/`, `enclosures/`, `build-guides/` — practical deployment guidance
 - `community/` — safety, conduct, and community-facing information
 - `reference/` — glossary/terminology-style content
-- Root pages (`home.md`, `index.md`, `faq.md`, etc.) — top-level navigation and onboarding
+- Top-level wiki pages in `wiki/` (`index.md`, `getting-started.md`, `faq.md`, etc.) — navigation and onboarding
+- Repository metadata docs at root (`README.md`, `CONTRIBUTING.md`, `CHANGELOG.md`)
 
 ---
 
@@ -62,7 +63,7 @@ When making technical claims, include enough context that a new operator can ver
 
 1. Edit or add Markdown pages.
 2. Check links and obvious formatting issues.
-3. Update `changelog.md` when content meaningfully changes.
+3. Update `CHANGELOG.md` when content meaningfully changes.
 4. Open a PR with a concise summary of what changed and why.
 
 Small typo fixes usually do not need a detailed changelog entry. Structural or content changes should.
