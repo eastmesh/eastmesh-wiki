@@ -1,10 +1,12 @@
 name: zenwiki
 services:
-    zensical:
-        stdin_open: true
-        tty: true
-        ports:
-            - 3999:8000
-        volumes:
-            - ./wiki/:/docs
-        image: zensical/zensical
+  zensical:
+    image: zensical/zensical
+    stdin_open: true
+    tty: true
+    ports:
+      - 3999:8000
+    volumes:
+      - ./wiki:/wiki:ro
+      - ./zensical.toml:/zensical.toml:ro
+    command: serve --host 0.0.0.0 --port 8000 --config /zensical.toml
