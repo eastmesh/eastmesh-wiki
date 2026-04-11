@@ -6,5 +6,5 @@ services:
         ports:
             - 3999:8000
         volumes:
-            - ./:/docs
+            - ./wiki/:/docs
         image: zensical/zensical
