@@ -21,6 +21,8 @@ Track major changes to the wiki content and structure.
 - Moved repository meta docs out of `wiki/` to root: `README.md`, `CONTRIBUTING.md`, and `CHANGELOG.md`.
 - Updated internal links affected by the page/file moves (including home and hardware references).
 - Investigated dark mode configuration: `zensical.toml` already defines both `theme` and `themeDark` palettes; no explicit dark-mode toggle setting exists in this repo config, suggesting mode switching is controlled by Zensical runtime/theme behavior rather than markdown content files.
+- Added explicit `link` and `linkHover` theme colors in both light and dark palettes so hyperlink styling follows the EastMesh green accent consistently.
+- Switched to Zensical-native custom palette wiring (`primary/accent = "custom"` + `extra_css`) and mapped the full EastMesh light/dark token set into CSS variables so grey surfaces/text and green links apply consistently across the site.
 
 ---
 
