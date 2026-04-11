@@ -1,0 +1,10 @@
+name: zenwiki
+services:
+    zensical:
+        stdin_open: true
+        tty: true
+        ports:
+            - 3999:8000
+        volumes:
+            - ./wikijs:/docs
+        image: zensical/zensical
