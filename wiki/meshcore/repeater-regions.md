@@ -16,7 +16,7 @@ This page applies to repeater firmware with region management support, available
 
 ## Region concepts
 
-A repeater can store a tree of named regions below the wildcard root `*`. For EastMesh, a useful example is:
+A repeater can store a tree of named regions. The special `*` entry represents traffic with no region transport code; it is not a wildcard that matches every named region. For EastMesh, a useful example is:
 
 ```text
 *
@@ -52,7 +52,7 @@ Setting a home or default region does not, by itself, permit forwarding. Define 
    get flood.max.unscoped
    ```
 
-4. Make sure you have a recovery path. A restrictive wildcard policy can stop unscoped remote administration from travelling beyond the first repeater.
+4. Make sure you have a recovery path. A restrictive `*`/unscoped-traffic policy can stop unscoped remote administration from travelling beyond the first repeater.
 
 Do not change the radio frequency, bandwidth, spreading factor, or channel keys as part of a region-only change.
 
@@ -130,17 +130,17 @@ region save
 
 The last two commands intentionally leave `au` allowed while blocking `au-vic`; use the policy that matches the repeater's role. A node does not need every possible region in the network, only the scopes it is meant to carry.
 
-The wildcard `*` controls packets with no region transport code. It is not a substitute for defining named regions.
+The special `*` entry controls packets with no region transport code. It is not a wildcard and is not a substitute for defining named regions.
 
 ---
 
 ## What an unscoped message is
 
-An **unscoped** flood message has no region transport code. It is not automatically a message for every named region and should not be treated as a global broadcast. Each repeater applies its wildcard policy and the separate unscoped flood hop limit.
+An **unscoped** flood message has no region transport code. It is not automatically a message for every named region and should not be treated as a global broadcast. Each repeater applies the `*` entry's unscoped-traffic policy and the separate unscoped flood hop limit.
 
 Unscoped traffic is useful for compatibility, bootstrap, or deliberately local messages, but unrestricted unscoped flooding can cross the regional boundaries that named scopes are intended to provide.
 
-### Wildcard policy
+### Unscoped-traffic policy (`*`)
 
 To allow unscoped flood forwarding:
 
@@ -183,7 +183,7 @@ This setting is separate from `flood.max`, which controls ordinary scoped flood 
 | No unscoped forwarding | `region denyf *` or `set flood.max.unscoped 0` | Unscoped floods are stopped at the boundary |
 | Named regional forwarding | `region allowf au-vic` | Matching `au-vic` scoped floods can cross; unscoped policy is independent |
 
-For a regional repeater, prefer named scopes for normal network traffic and choose an explicit, documented policy for unscoped messages. Coordinate the policy with neighbouring operators before applying it: clients or tools that depend on unscoped floods may appear unreachable after a wildcard restriction.
+For a regional repeater, prefer named scopes for normal network traffic and choose an explicit, documented policy for unscoped messages. Coordinate the policy with neighbouring operators before applying it: clients or tools that depend on unscoped floods may appear unreachable after restricting the `*`/unscoped-traffic entry.
 
 ---
 
@@ -196,7 +196,7 @@ After saving the configuration:
 3. Test a message using the intended named scope, such as `au-vic`, from a node that is authorised and configured for that scope.
 4. Test unscoped traffic separately; do not use a successful named-scope test as evidence that unscoped traffic is allowed.
 5. If a scoped message stops unexpectedly, check every repeater on the path for the same region name, an allowed flood flag, and a sufficient `flood.max`.
-6. If remote administration stops working, use the local serial/recovery connection and restore the documented wildcard or unscoped-hop policy.
+6. If remote administration stops working, use the local serial/recovery connection and restore the documented `*`/unscoped-traffic or unscoped-hop policy.
 
 A region name is a configuration convention, not proof that a packet came from that physical location. Treat region labels as routing scope and operational policy, and document who maintains each scope.
 
