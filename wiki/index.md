@@ -30,6 +30,7 @@ This wiki is a mess and welcomes community input
 
 - **[MeshCore Overview](./meshcore/overview)**
 - **[Routing Algorithm](./meshcore/routing)**
+- **[Repeater Regions & Unscoped Messages](./meshcore/repeater-regions)**
 - **[Packet Structure](./meshcore/packet-structure)**
 - **[Encryption & Authentication](./meshcore/encryption)**
 - **[Channels & Keys](./meshcore/channels-and-keys)**
