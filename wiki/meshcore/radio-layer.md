@@ -45,24 +45,17 @@ MeshCore uses four LoRa parameters to define the radio channel. All nodes on the
 
 Configure via CLI:
 ```
-set radio <freq_MHz> <bw_kHz> <sf> <cr>
-set txpow <dBm>
+set radio <freq_MHz>,<bw_kHz>,<sf>,<cr>
+set tx <dBm>
 ```
 
 ---
 
 ## Regional Frequency Presets
 
-Default parameters by region:
+MeshCore maintains suggested regional presets through its app API rather than a fixed firmware table. Check the current [upstream preset documentation](https://github.com/meshcore-dev/MeshCore/blob/main/docs/radio_presets.md) and the MeshCore app before configuring a new node; comply with the applicable local spectrum rules.
 
-| Region | Frequency | Bandwidth | SF | CR | Notes |
-|--------|-----------|-----------|----|----|-------|
-| EU | 869.525 MHz | 62.5 kHz | 7–9 | 4/5 | 10% duty cycle sub-band |
-| US / Canada | 910.525 MHz | 62.5 kHz | 7 | 4/5 | |
-| Australia / NZ | 915.0 MHz | 62.5 kHz | 7–9 | 4/5 | 915–928 MHz ISM band |
-| Switzerland | 869.618 MHz | 62.5 kHz | 8 | 4/8 | |
-
-**Australia/NZ note**: The 915–928 MHz band has generous frequency hopping or wideband rules. MeshCore uses a single fixed frequency rather than frequency hopping, so it operates as a fixed narrowband system within this band. Check ACMA guidelines for your specific use case.
+For an existing EastMesh deployment, the local community profile takes precedence over a generic regional suggestion. Match the active EastMesh profile exactly and confirm it with the community before changing an infrastructure node. The Victoria onboarding example remains `916.575 MHz`, `62.5 kHz`, `SF7`, `CR 4/8`; it is an EastMesh network baseline, not a universal Australian default.
 
 ### 62.5 kHz Bandwidth and LoRaWAN Incompatibility
 
@@ -138,20 +131,13 @@ duty_cycle = 100 / (factor + 1) = 33.3%
 
 The radio must be silent for at least **2× the last transmission duration** before the next transmission fires.
 
-For stricter regional limits (e.g., EU 869.525 MHz at 10% max):
+For a 10% limit, current firmware uses the direct duty-cycle control:
 
 ```
-set af 9.0   (airtime factor = 9.0 → 10% duty cycle)
+set dutycycle 10
 ```
 
-Formula: `duty_cycle = 100 / (af + 1)`
-
-| `af` value | Effective duty cycle |
-|-----------|---------------------|
-| 1.0 | 50% |
-| 4.0 | 20% |
-| 9.0 | 10% (EU legal limit for this sub-band) |
-| 19.0 | 5% |
+`get/set af` remains available for compatibility but is deprecated from firmware v1.15.0 onward. Prefer `get/set dutycycle` and choose a value permitted by the relevant regional rules.
 
 ---
 

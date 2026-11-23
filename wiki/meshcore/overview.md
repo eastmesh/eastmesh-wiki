@@ -19,7 +19,7 @@ MeshCore is a LoRa-based mesh networking protocol designed for resilient, off-gr
 | **Companion** | An endpoint device used for sending and receiving messages. Carried by users. Does not forward others' traffic. |
 | **Repeater** | Infrastructure node that extends coverage by forwarding packets. The backbone of any deployment. |
 | **Room Server** | Store-and-forward message board. Holds messages for offline recipients. |
-| **Channel** | A shared group communication namespace, defined by a 32-byte shared secret. Not tied to radio frequency. |
+| **Channel** | A shared group communication namespace, defined by a 16-byte shared secret. Not tied to radio frequency. |
 | **Contact** | A known node — stored with public key, cached route, and shared secret. |
 | **Advertisement (ADVERT)** | Signed broadcast that announces a node's identity, type, name, and optionally GPS location. |
 | **Link quality** | Measured via RSSI (signal strength) and SNR (signal-to-noise ratio). Drives routing decisions. |

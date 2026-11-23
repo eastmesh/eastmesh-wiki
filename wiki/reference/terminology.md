@@ -17,12 +17,12 @@ Core terms and definitions used throughout this wiki. Use terms consistently whe
 - **Node:** any device participating in the mesh, regardless of role
 - **Companion node:** personal portable node that sends and receives messages; does not forward traffic from other nodes; connects to the mobile app via BLE or USB
 - **Fixed node:** stationary companion node deployed at home or a fixed site for persistent local coverage
-- **Repeater / relay:** node configured to forward packets, extending network reach; infrastructure backbone of any deployment; no app interface, managed via CLI
+- **Repeater / relay:** node configured to forward packets, extending network reach; infrastructure backbone of a deployment; managed through its CLI locally or, where enabled and authorised, remotely
 - **Room Server:** store-and-forward message board node; holds messages for offline recipients; login-based access control
 - **Sensor node:** transmit-only node that broadcasts telemetry (GPS, environmental data) in CayenneLPP format; no user interface
 - **Terminal Chat:** CLI-only companion node; useful for headless Linux devices and development
 - **KISS Modem:** firmware that exposes a MeshCore radio as a standard KISS TNC interface for APRS and AX.25 integration
-- **Channel:** a group communication namespace defined by a 32-byte shared secret; not related to radio frequency; all nodes sharing the secret can decrypt group messages on that channel
+- **Channel:** a group communication namespace defined by a 16-byte shared secret; not related to radio frequency; all nodes sharing the secret can decrypt group messages on that channel
 - **Contact:** a known node stored locally with its public key, cached routing path, and derived shared secret
 - **Advertisement (ADVERT):** a signed broadcast packet that announces a node's identity, type, name, and optionally GPS coordinates; used for discovery and routing
 
@@ -32,11 +32,11 @@ Core terms and definitions used throughout this wiki. Use terms consistently whe
 
 - **Flood (ROUTE_TYPE_FLOOD):** routing mode where a packet propagates to all nodes; used for initial discovery
 - **Direct (ROUTE_TYPE_DIRECT):** routing mode using a cached explicit path; used for subsequent messages to a known contact
-- **Path:** ordered sequence of 1-byte node IDs that describes the hops between sender and destination
+- **Path:** ordered sequence of node hashes that describes the hops between sender and destination; current firmware supports one-, two-, and three-byte hash encodings
 - **Path caching:** storing the returned path from a flood discovery for reuse in direct routing
 - **Hop limit (flood_max):** configurable maximum number of hops a flood packet may traverse before being dropped
 - **Duplicate suppression:** mechanism that prevents the same packet from being forwarded more than once by any node
-- **ACK (acknowledgement):** a 4-byte CRC response confirming receipt of a message
+- **ACK (acknowledgement):** a compact authenticated response confirming receipt of a message
 - **TRACE:** diagnostic packet that collects per-hop SNR data as it traverses the mesh
 
 ---
@@ -66,7 +66,7 @@ Core terms and definitions used throughout this wiki. Use terms consistently whe
 - **AES-128-ECB:** symmetric encryption algorithm used for message confidentiality; ECB mode means no IV/nonce
 - **HMAC-SHA256:** hash-based message authentication code providing message integrity and authenticity
 - **Shared secret:** 32-byte value derived from ECDH between two nodes; used as the encryption and MAC key for their private messages
-- **Channel secret:** 32-byte shared key material used for group channel encryption and authentication
+- **Channel secret:** 16-byte shared key material used for group channel encryption and authentication
 - **MAC (message authentication code):** 2-byte truncated HMAC tag appended to encrypted messages to verify integrity
 
 ---

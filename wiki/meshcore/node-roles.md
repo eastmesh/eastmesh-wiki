@@ -45,7 +45,7 @@ The Companion is the endpoint most users carry. It sends and receives messages b
   - Cached path to that contact
   - Shared secret (computed on first contact, cached)
   - Name, last-heard timestamp, GPS coordinates (if shared)
-- Manages up to 40 group channels
+- Manages a board/build-dependent number of group channels; query the device for its `max_channels` value
 
 ### Offline queue
 
@@ -115,18 +115,17 @@ tx_delay_factor: 0.5 for flood, 0.2 for direct
 
 ### Configuration
 
-Managed entirely via USB serial CLI or remote mesh text commands. No app required.
+Managed through the CLI over USB serial or, where enabled and authorised, remote MeshCore management. No companion app is required.
 
 Key parameters:
 
 | Parameter | CLI Command | Description |
 |-----------|-------------|-------------|
 | Flood max hops | `set flood.max <n>` | 0–64; drop floods at this hop count |
-| Disable forwarding | `set fwd.disable <0/1>` | Emergency kill switch |
-| Power saving | `set powersave <0/1>` | 5-second sleep cycle |
-| Airtime factor | `set af <value>` | Duty cycle control |
-| Radio params | `set radio <freq> <bw> <sf> <cr>` | Must match network |
-| TX power | `set txpow <dBm>` | Transmit power |
+| Power saving | `powersaving <on|off>` | Enable or disable supported repeater power saving |
+| Duty cycle | `set dutycycle <1-100>` | Set the explicit permitted duty-cycle percentage |
+| Radio params | `set radio <freq>,<bw>,<sf>,<cr>` | Must match the network profile |
+| TX power | `set tx <dBm>` | Set radio-chip transmit power; account for any external PA |
 
 ### Statistics tracked
 

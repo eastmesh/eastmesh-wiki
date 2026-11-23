@@ -283,10 +283,10 @@ meshcore://contact?pubkey=<64-char-hex-pubkey>&name=<url-encoded-name>
 ### Channel QR
 
 ```
-meshcore://?name=<url-encoded-name>&secret=<64-char-hex-secret>
+meshcore://?name=<url-encoded-name>&secret=<32-char-hex-secret>
 ```
 
-The `secret` field is the 32-byte channel secret encoded as a 64-character hex string. Scan with the MeshCore app to add the contact or join the channel directly.
+The `secret` field is the 16-byte channel secret encoded as a 32-character hex string. Scan with the MeshCore app to add the contact or join the channel directly.
 
 ---
 

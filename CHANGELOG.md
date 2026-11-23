@@ -12,6 +12,18 @@ Track major changes to the wiki content and structure.
 
 ---
 
+## 2026-11-22
+
+**MeshCore freshness and buildability audit**
+
+- Removed obsolete duplicate protocol material from `meshcore/general`; it now points readers to the maintained local and upstream references.
+- Corrected current MeshCore channel-key size (16 bytes), board-dependent channel capacity, CLI radio syntax, transmit-power command, remote-management wording, and duty-cycle guidance (`set dutycycle`; legacy `set af` is deprecated).
+- Replaced the static generic radio-preset table with the maintained MeshCore source and documented that an active EastMesh profile takes precedence for local interoperability.
+- Verified the public EastMesh site, wiki, forum, IRC endpoint, and map resolve successfully during the audit.
+- Made `build-zensical.sh` work in non-interactive environments and preserve host file ownership.
+
+---
+
 
 ## 2026-04-11
 

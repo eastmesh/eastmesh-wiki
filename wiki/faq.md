@@ -27,7 +27,7 @@ See: [Recommended Hardware](./hardware/recommended)
 
 ### What app do I need?
 
-The MeshCore companion app (iOS and Android) is the primary interface for companion radio devices. For repeaters and terminal nodes, all configuration is done via USB serial CLI at 115200 baud.
+The MeshCore companion app is the primary interface for companion radio devices. Repeaters, room servers, and sensors expose a CLI over USB serial at 115200 baud; supported nodes can also be administered remotely through MeshCore's access-controlled management interfaces. Use the current [upstream CLI reference](https://github.com/meshcore-dev/MeshCore/blob/main/docs/cli_commands.md) for command availability.
 
 ### How do I set my node name?
 
@@ -36,7 +36,7 @@ Via CLI: `set name <your_name>`
 
 ### How do I join the community channel?
 
-Contact the community via the forum at **https://forum.eastmesh.au** or IRC at **https://irc.eastmesh.au** to get the current community channel credentials. Channels are defined by a name and a 32-byte shared secret; both must match exactly on all nodes.
+Contact the community via the [forum](https://forum.eastmesh.au) or [IRC](https://irc.eastmesh.au) to get the current community channel credentials. Channels are defined by a name and a 16-byte shared secret; both must match exactly on all nodes.
 
 ---
 
@@ -75,7 +75,7 @@ Possible causes:
 - No repeater within range — try improving placement or confirming a repeater is active in your area
 - The destination node is offline or out of range
 - TX power is too high and causing front-end overload on nearby nodes (unlikely unless nodes are very close together)
-- Check the network map at **https://map.eastmesh.au** for nearby repeater coverage
+- Check the [network map](https://map.eastmesh.au) for nearby repeater coverage
 
 ### BLE won't connect / wrong PIN
 

@@ -19,11 +19,11 @@ In MeshCore, a "channel" is a **group communication namespace** defined entirely
 ```
 GroupChannel {
     hash[1 byte]    ← first byte of the channel secret's hash (packet identifier)
-    secret[32 bytes] ← shared key material (AES + HMAC key source)
+    secret[16 bytes] ← shared key material
 }
 ```
 
-All nodes sharing the same 32-byte secret can:
+All nodes sharing the same 16-byte secret can:
 - Decrypt and read group messages sent on that channel
 - Authenticate that messages came from channel members
 - Identify channel traffic in packet headers via the 1-byte hash
@@ -57,7 +57,7 @@ Anyone who knows the channel name can join. Suitable for loosely coordinated gro
 
 ### Private Channels
 
-Secret is a **randomly generated 32 bytes** shared out-of-band (via QR code, encrypted message, or in-person). Only people explicitly given the secret can join.
+Secret is a **randomly generated 16 bytes** shared out-of-band (via QR code, encrypted message, or in-person). Only people explicitly given the secret can join.
 
 Use cases:
 - Team/group operations
@@ -66,7 +66,7 @@ Use cases:
 
 Sharing format (QR code URI):
 ```
-meshcore://?name=<url-encoded-name>&secret=<64-char-hex-string>
+meshcore://?name=<url-encoded-name>&secret=<32-char-hex-string>
 ```
 
 ---
@@ -137,7 +137,7 @@ All operators are encouraged to monitor this channel during normal operation.
 
 If a private channel secret is compromised (a member leaves, a device is lost or stolen, or a secret is accidentally exposed):
 
-1. Generate a new random 32-byte secret
+1. Generate a new random 16-byte secret
 2. Share it with all remaining authorised members via a trusted out-of-band channel
 3. Coordinate a switchover time so members can add the new channel before the old one is abandoned
 4. Remove the old channel secret from all devices
@@ -154,14 +154,14 @@ The `ChannelDetails` struct on each device stores:
 ```
 GroupChannel {
     hash[1]    ← 1-byte channel identifier
-    secret[32] ← 32-byte shared secret
+    secret[16] ← 16-byte shared secret
 }
 name[32]       ← human-readable channel name
 ```
 
 Stored in `/channels2` on the device filesystem.
 
-Companion radio firmware supports up to **40 group channels** per device.
+Channel capacity is board/build dependent. Read `max_channels` from the device information response; current companion builds use capacities such as 1, 8, or 40 slots.
 
 ---
 

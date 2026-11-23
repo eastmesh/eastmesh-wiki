@@ -150,7 +150,7 @@ Low-level cryptographic building blocks:
 - **Does not forward packets** (`allowPacketForward()` = false)
 - Stores up to 350 contacts (ESP32-S3) or 160 contacts (ESP32/nRF52)
 - Maintains offline message queue (up to 256 messages)
-- Maintains up to 40 group channels
+- Maintains a board/build-dependent number of group channels; retrieve the device's advertised capacity rather than assuming 40
 - Exposes BLE/USB/WiFi/ESP-NOW interface to companion app
 - 16-entry LRU advertisement path cache
 
@@ -161,7 +161,7 @@ Low-level cryptographic building blocks:
 - No contact storage, no message queue
 - Maintains neighbour table (up to 50 entries)
 - Managed entirely via USB serial CLI or remote mesh CLI commands
-- Configurable flood_max hop limit, power save mode, airtime factor
+- Configurable flood limit, power-save mode, and duty-cycle controls
 
 ### simple_room_server
 
@@ -252,7 +252,7 @@ The `NodePrefs` struct contains all persistent node configuration:
 | `bridge_*` | various | Bridge configuration (type, delay, secret) |
 | `advert_loc_policy` | `uint8_t` | GPS in adverts: none / current / stored |
 
-Configure via CLI: `set radio <freq> <bw> <sf> <cr>`, `set flood.max <n>`, etc.
+Configure via CLI: `set radio <freq>,<bw>,<sf>,<cr>`, `set flood.max <n>`, `set dutycycle <1-100>`, etc. Refer to the [upstream CLI reference](https://github.com/meshcore-dev/MeshCore/blob/main/docs/cli_commands.md) for firmware-specific availability.
 
 ---
 

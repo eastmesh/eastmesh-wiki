@@ -170,7 +170,7 @@ effective_duty_cycle = 100 / (airtime_factor + 1) = 33.3%
 
 The radio must be silent for at least **2× the last transmission duration** before the next transmission. This is enforced by the `Dispatcher` before any queued transmission fires.
 
-For regions with strict duty cycle requirements (e.g., EU 869.525 MHz sub-band at 10% max), operators should configure `af = 9.0`.
+For regions with strict duty-cycle requirements, set the explicit percentage supported by current firmware (for example, `set dutycycle 10` for a 10% limit). `set af` is retained for compatibility but deprecated from firmware v1.15.0 onward.
 
 ---
 
