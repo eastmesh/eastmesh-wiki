@@ -45,7 +45,7 @@ This wiki is a mess and welcomes community input
 
 - **Network Map:** https://map.eastmesh.au  
 - **Main Site:** https://eastmesh.au  
-- **Forum:** https://forum.eastmesh.au  
+
 
 
 ---

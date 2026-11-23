@@ -108,7 +108,7 @@ Rules:
 
 ## Public Shared Channel (eastmesh.au)
 
-The **eastmesh public channel** is used for community-wide coordination and onboarding. Contact the community via the forum or chat to obtain current channel credentials.
+The **eastmesh public channel** is used for community-wide coordination and onboarding. Obtain current channel credentials from an authorised EastMesh operator.
 
 All operators are encouraged to monitor this channel during normal operation.
 

@@ -18,7 +18,7 @@ Common questions about MeshCore deployments, operations, and troubleshooting.
 
 Use only frequencies and duty-cycle/power settings allowed in your region. For Australia and New Zealand, the community uses the 915 MHz ISM band. For EU deployments, 868 MHz is standard.
 
-For most local deployments, use the shared community frequency profile so all nodes remain interoperable. If you are unsure what settings to use, ask on the forum or IRC before transmitting — a misconfigured node that cannot decode any traffic is not useful to anyone.
+For most local deployments, use the shared community frequency profile so all nodes remain interoperable. If you are unsure what settings to use, confirm the active local profile with an authorised EastMesh operator before transmitting — a misconfigured node that cannot decode any traffic is not useful to anyone.
 
 ### What hardware should I buy first?
 
@@ -36,7 +36,7 @@ Via CLI: `set name <your_name>`
 
 ### How do I join the community channel?
 
-Contact the community via the [forum](https://forum.eastmesh.au) or [IRC](https://irc.eastmesh.au) to get the current community channel credentials. Channels are defined by a name and a 16-byte shared secret; both must match exactly on all nodes.
+Obtain current community channel credentials from an authorised EastMesh operator. Channels are defined by a name and a 16-byte shared secret; both must match exactly on all nodes.
 
 ---
 
