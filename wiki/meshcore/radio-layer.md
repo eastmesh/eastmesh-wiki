@@ -2,7 +2,7 @@
 title: radio-layer
 description: MeshCore LoRa radio layer — supported chips, LoRa parameters, regional presets, airtime, and CAD
 published: true
-date: 2026-02-19T00:00:00.000Z
+date: 2026-11-24T00:00:00.000Z
 tags: meshcore, radio, lora, rf, technical
 ---
 
@@ -55,7 +55,7 @@ set tx <dBm>
 
 MeshCore maintains suggested regional presets through its app API rather than a fixed firmware table. Check the current [upstream preset documentation](https://github.com/meshcore-dev/MeshCore/blob/main/docs/radio_presets.md) and the MeshCore app before configuring a new node; comply with the applicable local spectrum rules.
 
-For an existing EastMesh deployment, the local community profile takes precedence over a generic regional suggestion. Match the active EastMesh profile exactly and confirm it with the community before changing an infrastructure node. The Victoria onboarding example remains `916.575 MHz`, `62.5 kHz`, `SF7`, `CR 4/8`; it is an EastMesh network baseline, not a universal Australian default.
+For an existing local mesh, its chosen profile takes precedence over a generic regional suggestion. Match that profile exactly and confirm it with other participants before changing an infrastructure node. The Victoria onboarding example, `916.575 MHz`, `62.5 kHz`, `SF7`, `CR 4/8`, is one local configuration example, not a universal Australian default.
 
 ### 62.5 kHz Bandwidth and LoRaWAN Incompatibility
 

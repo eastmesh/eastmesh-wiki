@@ -2,13 +2,13 @@
 title: welcome
 description: EastMesh documentation hub
 published: true
-date: 2026-02-21T00:00:00.000Z
+date: 2026-11-24T00:00:00.000Z
 tags: home, navigation
 ---
 
 # Welcome to the EastMesh wiki
 
-This wiki is a mess and welcomes community input 
+EastMesh is a documentation website for MeshCore concepts, practical operation, and independently run local meshes. It does not operate or govern a single MeshCore network.
 ---
 
 ## General info
@@ -43,8 +43,8 @@ This wiki is a mess and welcomes community input
 
 ## Community resources
 
-- **Network Map:** https://map.eastmesh.au  
-- **Main Site:** https://eastmesh.au  
+- **Mesh Map:** https://map.eastmesh.au
+- **Main Site:** https://eastmesh.au
 
 
 

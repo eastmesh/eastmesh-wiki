@@ -2,7 +2,7 @@
 title: changelog
 description: Track major changes to the wiki content and structure
 published: true
-date: 2026-02-21T00:00:00.000Z
+date: 2026-11-24T00:00:00.000Z
 tags: changelog, meta
 ---
 
@@ -12,13 +12,24 @@ Track major changes to the wiki content and structure.
 
 ---
 
+## 2026-11-24
+
+**Local-mesh wording and scope clarification**
+
+- Clarified that EastMesh is a documentation website, not an authority over a single MeshCore network.
+- Replaced authority-style channel and radio wording with guidance to confirm local settings and credentials with community members who participate in the relevant mesh.
+- Updated examples, map labels, safety guidance, and contribution guidance to refer to independent local meshes.
+
+---
+
 ## 2026-11-22
 
 **MeshCore freshness and buildability audit**
 
 - Removed obsolete duplicate protocol material from `meshcore/general`; it now points readers to the maintained local and upstream references.
 - Corrected current MeshCore channel-key size (16 bytes), board-dependent channel capacity, CLI radio syntax, transmit-power command, remote-management wording, and duty-cycle guidance (`set dutycycle`; legacy `set af` is deprecated).
-- Replaced the static generic radio-preset table with the maintained MeshCore source and documented that an active EastMesh profile takes precedence for local interoperability.
+- Replaced the static generic radio-preset table with the maintained MeshCore source and documented that an active local-mesh profile takes precedence for local interoperability.
+
 - Verified the public EastMesh site, wiki, and map resolve successfully during the audit.
 - Removed retired EastMesh forum and IRC references; the site does not publish a replacement public community-contact destination.
 - Made `build-zensical.sh` work in non-interactive environments and preserve host file ownership.

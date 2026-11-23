@@ -2,7 +2,7 @@
 title: faq
 description: Common questions about MeshCore deployments, operations, and troubleshooting
 published: true
-date: 2026-02-19T00:00:00.000Z
+date: 2026-11-24T00:00:00.000Z
 tags: faq, troubleshooting, getting-started
 ---
 
@@ -16,9 +16,9 @@ Common questions about MeshCore deployments, operations, and troubleshooting.
 
 ### What frequencies are used?
 
-Use only frequencies and duty-cycle/power settings allowed in your region. For Australia and New Zealand, the community uses the 915 MHz ISM band. For EU deployments, 868 MHz is standard.
+Use only frequencies and duty-cycle/power settings allowed in your region. Australia and New Zealand commonly use the 915 MHz ISM band, while many European deployments use 868 MHz sub-bands; exact settings vary by location and by local mesh.
 
-For most local deployments, use the shared community frequency profile so all nodes remain interoperable. If you are unsure what settings to use, confirm the active local profile with an authorised EastMesh operator before transmitting — a misconfigured node that cannot decode any traffic is not useful to anyone.
+For a local mesh, use the shared profile that its participants have chosen so nodes remain interoperable. If you are unsure what settings to use, confirm the active local profile with other community members before transmitting — a misconfigured node that cannot decode any traffic is not useful to anyone.
 
 ### What hardware should I buy first?
 
@@ -34,9 +34,9 @@ The MeshCore companion app is the primary interface for companion radio devices.
 Via the companion app: Settings → Node name.
 Via CLI: `set name <your_name>`
 
-### How do I join the community channel?
+### How do I join a local channel?
 
-Obtain current community channel credentials from an authorised EastMesh operator. Channels are defined by a name and a 16-byte shared secret; both must match exactly on all nodes.
+Ask a community member who participates in that local mesh for its current channel credentials. Channels are defined by a name and a 16-byte shared secret; both must match exactly on all nodes.
 
 ---
 
@@ -75,7 +75,7 @@ Possible causes:
 - No repeater within range — try improving placement or confirming a repeater is active in your area
 - The destination node is offline or out of range
 - TX power is too high and causing front-end overload on nearby nodes (unlikely unless nodes are very close together)
-- Check the [network map](https://map.eastmesh.au) for nearby repeater coverage
+- Check the [mesh map](https://map.eastmesh.au) for nearby repeater coverage
 
 ### BLE won't connect / wrong PIN
 

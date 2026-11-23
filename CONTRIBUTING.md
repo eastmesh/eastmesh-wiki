@@ -14,7 +14,7 @@ How to keep this wiki accurate, useful, and well-maintained.
 
 ## What belongs in this wiki
 
-This wiki documents the eastmesh.au MeshCore network and its practical operation. Appropriate content includes:
+This wiki is published on eastmesh.au and documents MeshCore concepts, practical operation, and lessons that may help independent local meshes. It does not define a single network's rules, credentials, or operating profile. Appropriate content includes:
 
 - Protocol documentation that is accurate to the current firmware
 - Deployment guidance that has been tested and verified

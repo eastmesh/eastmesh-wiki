@@ -2,7 +2,7 @@
 title: channels-and-keys
 description: MeshCore channel definition, types, key management, and naming conventions
 published: true
-date: 2026-02-19T00:00:00.000Z
+date: 2026-11-24T00:00:00.000Z
 tags: meshcore, channels, keys, security
 ---
 
@@ -39,7 +39,7 @@ All nodes sharing the same 16-byte secret can:
 Use a universally known or published shared secret. Any operator can join by knowing the channel name/secret.
 
 Use cases:
-- Community-wide coordination (e.g., "eastmesh public")
+- Local-mesh coordination (e.g., "neighbourhood")
 - Emergency coordination
 - Onboarding newcomers
 
@@ -88,11 +88,11 @@ MeshCore group messages provide **message confidentiality** (decryption requires
 
 Consistent naming helps operators find and join the right channels.
 
-### eastmesh.au conventions
+### Example naming conventions
 
 | Category | Naming Pattern | Example |
 |----------|---------------|---------|
-| Community general | Descriptor in plain English | `eastmesh` |
+| Community general | Descriptor in plain English | `local` |
 | Geographic area | Location name | `melb-north`, `vic-coast` |
 | Functional/operational | Function prefix | `ops-vic`, `emcomm-au` |
 | Event-specific | Event + year | `hamfest-2026` |
@@ -106,11 +106,11 @@ Rules:
 
 ---
 
-## Public Shared Channel (eastmesh.au)
+## Shared community channels
 
-The **eastmesh public channel** is used for community-wide coordination and onboarding. Obtain current channel credentials from an authorised EastMesh operator.
+Some local meshes use a shared channel for coordination and onboarding. Ask a community member who participates in that mesh for its current channel credentials.
 
-All operators are encouraged to monitor this channel during normal operation.
+Participants in a local mesh can choose to monitor its shared channel during normal operation.
 
 ---
 

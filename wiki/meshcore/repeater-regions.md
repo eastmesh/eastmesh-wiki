@@ -2,7 +2,7 @@
 title: repeater regions and unscoped messages
 description: Configure MeshCore repeater regions and control unscoped flood messages
 published: true
-date: 2026-08-25T00:00:00.000Z
+date: 2026-11-24T00:00:00.000Z
 tags: meshcore, repeaters, regions, routing, operations
 ---
 
@@ -16,7 +16,7 @@ This page applies to repeater firmware with region management support, available
 
 ## Region concepts
 
-A repeater can store a tree of named regions. The special `*` entry represents traffic with no region transport code; it is not a wildcard that matches every named region. For EastMesh, a useful example is:
+A repeater can store a tree of named regions. The special `*` entry represents traffic with no region transport code; it is not a wildcard that matches every named region. One example for a local mesh is:
 
 ```text
 *

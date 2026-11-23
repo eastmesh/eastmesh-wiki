@@ -1,20 +1,20 @@
 ---
 title: rules-and-safety
-description: Community conduct, RF compliance, safe deployment practices, and privacy expectations for eastmesh.au operators
+description: Community conduct, RF compliance, safe deployment practices, and privacy expectations for MeshCore operators
 published: true
-date: 2026-02-19T00:00:00.000Z
+date: 2026-11-24T00:00:00.000Z
 tags: community, safety, compliance, privacy, conduct
 ---
 
 # Community Rules & Safety
 
-Guidelines for RF compliance, safe physical deployments, community conduct, and privacy for operators on the eastmesh.au network.
+Guidelines for RF compliance, safe physical deployments, community conduct, and privacy for people participating in MeshCore communities and independent local meshes.
 
 ---
 
 ## RF compliance
 
-LoRa radios are unlicensed devices operating in designated ISM bands. Staying within legal limits keeps the network operational and protects the community from regulatory attention.
+LoRa radios are unlicensed devices operating in designated ISM bands. Staying within legal limits helps keep local mesh activity sustainable and protects participants from regulatory attention.
 
 - **Operate only within legal regional frequency limits** — for Australia/NZ this is the 915–928 MHz ISM band; for EU, the 868 MHz sub-bands with their respective duty cycle limits
 - **Respect transmit power limits** — maximum 100 mW (20 dBm) EIRP is typical; check the relevant regulatory framework (ACMA for Australia, ETSI for EU) for your specific case
